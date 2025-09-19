@@ -1,1 +1,67 @@
 /*  your css code here. If applicable */
+/* Container */
+.hero {
+  display: flex;                 /* required */
+  justify-content: space-between;/* required */
+  align-items: center;           /* required */
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;              /* clips image corners */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Image: clipped to fit */
+.hero-img {
+  width: 65%;        /* required: width */
+  height: 380px;     /* required: height */
+  object-fit: cover; /* required: cover + clipping */
+  display: block;
+}
+
+/* Text area */
+.hero-content {
+  width: 35%;
+  padding: 40px 36px;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.hero-content p {
+  color: #555;
+  margin: 0 0 20px;
+}
+
+/* Explore button/link */
+.btn {
+  display: inline-block;
+  padding: 10px 18px;          /* required: padding */
+  background-color: #e6392f;   /* required: background-color */
+  color: #fff;                 /* required: color */
+  border-radius: 6px;          /* required: border-radius */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-img, .hero-content {
+    width: 100%;
+  }
+  .hero-img {
+    height: 260px;
+  }
+  .hero-content {
+    text-align: center;
+  }
+}
+
